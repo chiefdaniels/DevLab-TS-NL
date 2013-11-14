@@ -1,0 +1,83 @@
+/*
+.form_block_wide td {
+    width: 160px;
+}
+*/
+
+tr.odd {
+    background-color: #EBF5EA;
+}
+tr.even {
+    background-color: white;
+}
+.smallinput{
+	width: 162px !important;
+	background:url(../img/input.png) no-repeat 0 0 !important;
+}
+
+.left {
+	float: left !important;
+	margin-left: 15px !important;
+}
+
+.category {
+	font-weight: bold;
+	font-size: 16px;
+	padding-left: 20px;
+}
+
+.assertError {
+	border-width: 2px;
+	border-color: #FF0000;
+	border-style: solid;
+	padding: 5px;
+}
+
+.output {
+	line-height: 29px;
+	margin-left: 10px;
+}
+
+.longlabel {
+	width: auto !important;
+}
+.tooltip {
+  border-bottom: 1px dotted #000000;
+  color: #000000; outline: none;
+  cursor: help; text-decoration: none;
+  position: relative;
+}
+.tooltip span {
+  margin-left: -999em;
+  position: absolute;
+}
+
+.tooltip:hover span {
+  font-family: Calibri, Tahoma, Geneva, sans-serif;
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  z-index: 100100;
+  margin-left: 0;
+  width: 400px;
+  box-shadow: 0 0 7px black;
+  background: white;
+  padding: 5px 5px;
+}
+.tooltip:hover img {
+  border: 0;
+  margin: -10px 0 0 -55px;
+  float: left;
+  position: absolute;
+}
+.tooltip:hover em {
+  font-family: Candara, Tahoma, Geneva, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  padding: 0.2em 0 0.6em 0;
+}
+.kwrFont {
+    font-family: 'CronosPro-SemiboldDisp';
+    font-size: 15px;
+}
