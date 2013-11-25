@@ -1,7 +1,7 @@
 package nl.watershare.qmra.service;
 
-import nl.watershare.qmra.form.LocationType;
-import nl.watershare.qmra.form.OrganismType;
+import nl.watershare.qmra.form.types.LocationType;
+import nl.watershare.qmra.form.types.OrganismType;
 
 public class SlowSandFiltrationModel {
 	

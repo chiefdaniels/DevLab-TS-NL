@@ -25,7 +25,7 @@ public class CriticalConditionDAO {
 	public CriticalCondition getCriticalCondition(Integer conditionId) {
 		
 		String queryStr =
-				" from CriticalCondition c " +
+				" from CriticalCondition " +
 				" where conditionId = :conditionId";
 		Query query = sessionFactory.getCurrentSession().createQuery(queryStr);
 		query.setInteger("conditionId", conditionId);
@@ -37,7 +37,7 @@ public class CriticalConditionDAO {
 	public List<CriticalCondition> getCriticalConditions(SelectionCriteria selectionCriteria) {;
 
 		// *** Compose query string ***
-		String queryStr = "from CriticalCondition c where " +
+		String queryStr = "from CriticalCondition where " +
 				" organismType =:organismType and" +
 				" processType =:processType";
 
@@ -51,7 +51,7 @@ public class CriticalConditionDAO {
 //			case SURROGATE: queryStr += " and organismTarget = :organismTarget";
 //		}
 		
-		queryStr = queryStr + " order by conditionType, subject, effect";
+//		queryStr = queryStr + " order by conditionType, subject, effect";
 		// ****************************
 		
 		// *** Prepare query ***

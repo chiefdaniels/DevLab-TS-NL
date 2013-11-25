@@ -10,21 +10,21 @@ import javax.servlet.http.HttpSession;
 import nl.watershare.entity.Country;
 import nl.watershare.qmra.entity.CriticalCondition;
 import nl.watershare.qmra.entity.ResearchData;
-import nl.watershare.qmra.form.ChlorinationType;
-import nl.watershare.qmra.form.ChlorineDisinfectionResult;
-import nl.watershare.qmra.form.CriticalConditionResult;
-import nl.watershare.qmra.form.CriticalConditionResultCondition;
-import nl.watershare.qmra.form.DisinfectionType;
-import nl.watershare.qmra.form.FiltrationType;
-import nl.watershare.qmra.form.GraphResult;
 import nl.watershare.qmra.form.MainForm;
-import nl.watershare.qmra.form.OrganismType;
-import nl.watershare.qmra.form.OutputType;
-import nl.watershare.qmra.form.PercentileException;
-import nl.watershare.qmra.form.ProcessType;
-import nl.watershare.qmra.form.ResearchDataResult;
-import nl.watershare.qmra.form.SlowSandFiltrationResult;
-import nl.watershare.qmra.form.YesNoType;
+import nl.watershare.qmra.form.types.ChlorinationType;
+import nl.watershare.qmra.form.types.DisinfectionType;
+import nl.watershare.qmra.form.types.FiltrationType;
+import nl.watershare.qmra.form.types.OrganismType;
+import nl.watershare.qmra.form.types.OutputType;
+import nl.watershare.qmra.form.types.ProcessType;
+import nl.watershare.qmra.form.types.YesNoType;
+import nl.watershare.qmra.result.ChlorineDisinfectionResult;
+import nl.watershare.qmra.result.PercentileException;
+import nl.watershare.qmra.result.ResearchDataResult;
+import nl.watershare.qmra.result.SlowSandFiltrationResult;
+import nl.watershare.qmra.result.criticalCondition.CriticalConditionResult;
+import nl.watershare.qmra.result.criticalCondition.CriticalConditionResultCondition;
+import nl.watershare.qmra.result.graph.GraphResult;
 import nl.watershare.qmra.service.ChlorineConstantService;
 import nl.watershare.qmra.service.ChlorineDisinfectionModel;
 import nl.watershare.qmra.service.CriticalConditionService;
@@ -157,89 +157,14 @@ public class QMRAController extends HttpServlet {
 			mainForm.setOutputType(outputType);
 		} catch (Exception e) {
 		}
-		
-//		mainForm = new MainForm();
-//
-//		mainForm.setOrganismType(OrganismType.CRYPTOSPORIDIUM);
-//		mainForm.setProcessType(ProcessType.CONVENTIONAL);
-//		mainForm.setTargetType(TargetType.BOTH);
-//		mainForm.setOutputType(OutputType.TABLE);
-
-		// *** Cryptosperium & Conventions processing ***
-//		mainForm.setOrganismType(OrganismType.CRYPTOSPORIDIUM);
-//		mainForm.setProcessType(ProcessType.CONVENTIONAL);
-//		mainForm.setTargetType(TargetType.BOTH);
-	
-		// *** Virus & UV disinfection ***
-//		mainForm.setOrganismType(OrganismType.VIRUS);
-//		mainForm.setProcessType(ProcessType.DISINFECTION);
-//		mainForm.setDisinfectionType(DisinfectionType.UV);
-//		mainForm.setOutputType(OutputType.MODEL);
-//		mainForm.setUvType(UvType.BOTH);
-	
-		// *** Cryptosperidium & GAC Filtration ***
-//		mainForm.setOrganismType(OrganismType.CRYPTOSPORIDIUM);
-//		mainForm.setProcessType(ProcessType.FILTRATION);
-//		mainForm.setFiltrationType(FiltrationType.GAC);
-//		mainForm.setTargetType(TargetType.BOTH);
-
-		// *** Virus & SSF Filtration ***
-//		mainForm.setOrganismType(OrganismType.VIRUS);
-//		mainForm.setProcessType(ProcessType.FILTRATION);
-//		mainForm.setFiltrationType(FiltrationType.SSF);
-//		mainForm.setTargetType(TargetType.BOTH);
-	
-		// *** Bateria & SSF Filtration ***
-//		mainForm.setOrganismType(OrganismType.BACTERIA);
-//		mainForm.setProcessType(ProcessType.FILTRATION);
-//		mainForm.setFiltrationType(FiltrationType.SSF);
-//		mainForm.setOutputType(OutputType.MODEL);
-//		mainForm.setTargetType(TargetType.BOTH);
-//		
-//		mainForm.setSchmutzdeckeAge(217);
-//		mainForm.setTemperature(19.5);
-
-		// *** Virus & SSF Filtration ***
-//		mainForm.setOrganismType(OrganismType.VIRUS);
-//		mainForm.setProcessType(ProcessType.FILTRATION);
-//		mainForm.setFiltrationType(FiltrationType.SSF);
-//		mainForm.setOutputType(OutputType.MODEL);
-//		mainForm.setTargetType(TargetType.BOTH);
-//		
-//		mainForm.setSchmutzdeckeAge(217);
-//		mainForm.setTemperature(19.5);
-			
-		// *** Giardia & Chlorine disinfection ***
-//		mainForm.setOrganismType(OrganismType.GIARDIA);
-//		mainForm.setProcessType(ProcessType.DISINFECTION);
-//		mainForm.setDisinfectionType(DisinfectionType.CHLORINE);
-//		mainForm.setOutputType(OutputType.MODEL);
-//		mainForm.setTargetType(TargetType.BOTH);
-//			
-//		mainForm.setChlorinationType(ChlorinationType.CSTR);
-//		mainForm.setHrt(5);
-//		mainForm.setResidualC(1);
-//		mainForm.setCstr(3);
-
-		// *** Virus & Chlorine disinfection ***
-//		mainForm.setOrganismType(OrganismType.VIRUS);
-//		mainForm.setProcessType(ProcessType.DISINFECTION);
-//		mainForm.setDisinfectionType(DisinfectionType.CHLORINE);
-//		mainForm.setOutputType(OutputType.MODEL);
-//		mainForm.setTargetType(TargetType.BOTH);
-//		
-//		mainForm.setChlorinationType(ChlorinationType.PLUGFLOW);
-//		mainForm.setHrt(5);
-//		mainForm.setResidualC(1);
-//		mainForm.setCstr(3);
-				
+						
 		model.put("mainForm", mainForm);
 		
 		return "main";
 	}
 
 	/**
-	 * Submit the step1AForm page. Processing user input.
+	 * Submit the mainform page. Processing user input.
 	 * 
 	 * @param step1Form
 	 * @param result
@@ -247,12 +172,13 @@ public class QMRAController extends HttpServlet {
 	 * @return
 	 */
 	@RequestMapping(value = "/submitMainForm", method = RequestMethod.POST)
-	public String submitStep1AForm_next(
+	public String submitMainForm(
 			@ModelAttribute("mainForm") @Validated MainForm mainForm,
 			BindingResult result,
 			Map<String, Object> model,
 			HttpSession session) {
 		
+		// *** Validate Main form ***
 		mainForm.validate(result);
 		if (result.hasErrors()) {
 			return "main";
@@ -281,7 +207,11 @@ public class QMRAController extends HttpServlet {
 			model.put("criticalConditionResultList", criticalConditionResultList);
 		}
 
+		// *****************************
+		// *** select Table or Model ***
+		// *****************************
 		OutputType outputType = null;
+		// *** Set standard outputType to TABLE for next pathogen/treatments ***
 		if ((mainForm.getOrganismType() == OrganismType.CRYPTOSPORIDIUM &&
 				mainForm.getProcessType() == ProcessType.CONVENTIONAL) ||
 				
@@ -291,7 +221,8 @@ public class QMRAController extends HttpServlet {
 			) {
 			
 			outputType = OutputType.TABLE;
-			
+		
+		// *** Set standard outputType to MODEL for next pathogen/treatments ***
 		} else if ((mainForm.getOrganismType() == OrganismType.GIARDIA &&
 				mainForm.getProcessType() == ProcessType.DISINFECTION &&
 				mainForm.getDisinfectionType() == DisinfectionType.CHLORINE) ||
@@ -308,13 +239,17 @@ public class QMRAController extends HttpServlet {
 
 			outputType = OutputType.MODEL;
 			
+		// *** Have the user select an outputType for all other pathogen/treaments
 		} else {
 			outputType = mainForm.getOutputType();
 		}
 		
+		// *******************************
 		// *** Output using table data ***
+		// *******************************
 		if (outputType == OutputType.TABLE) {
 			
+			// *** Extract research data from database tables ***
 			List<ResearchData> researchDataList = researchDataService.getResearchData(selectionCriteria);
 			
 			if (!researchDataList.isEmpty()) {
@@ -364,21 +299,25 @@ public class QMRAController extends HttpServlet {
 				GraphResult graphResult = new GraphResult(selectionCriteria, researchDataList);
 				model.put("graphList", graphResult.getGraphList());
 				
+				// *** Cryptosporidium - Conventional treatment ***
 				if (selectionCriteria.getOrganismType() == OrganismType.CRYPTOSPORIDIUM &&
 					selectionCriteria.getProcessType() == ProcessType.CONVENTIONAL) {		
 					
 					return "result1";
-					
+				
+				// *** Virus - Slow Sand Filtration (SSF) ***
 				} else if (selectionCriteria.getOrganismType() == OrganismType.VIRUS &&
 					selectionCriteria.getFiltrationType() == FiltrationType.SSF)	{
 					
 					return "result1";
-								
+				
+				// *** Cryptosporidium - Granular Activated Carbon (GAC) filtration ***
 				} else if (selectionCriteria.getOrganismType() == OrganismType.CRYPTOSPORIDIUM &&
 					selectionCriteria.getFiltrationType() == FiltrationType.GAC) {
 	
 					return "result3";
 
+				// *** Bacteria - Slow Sand Filtration ***
 				} else if (selectionCriteria.getOrganismType() == OrganismType.BACTERIA &&
 					selectionCriteria.getFiltrationType() == FiltrationType.SSF)	{
 		
@@ -387,9 +326,12 @@ public class QMRAController extends HttpServlet {
 			}
 		}	
 		
+		// *******************************
 		// *** Output using Model data ***
+		// *******************************
 		if (outputType == OutputType.MODEL) {
 			
+			// *** Output Virus - UV Model data ***
 			if (selectionCriteria.getOrganismType() == OrganismType.VIRUS &&
 				selectionCriteria.getDisinfectionType() == DisinfectionType.UV) {
 			
@@ -402,8 +344,9 @@ public class QMRAController extends HttpServlet {
 					model.put("graphList", graphResult.getGraphList());
 				}
 				
-				return "result2";
+				return "result2"; // Virus - UV disinfection
 
+			// *** Output Virus/Bacteria - Slow Sand Filtration Model data ***
 			} else if (selectionCriteria.getFiltrationType() == FiltrationType.SSF) {
 				SlowSandFiltrationModel ssfModel = new SlowSandFiltrationModel(
 						mainForm.getOrganismType(),
@@ -416,13 +359,13 @@ public class QMRAController extends HttpServlet {
 				
 				model.put("ssfResult", ssfResult);
 				
-				return "result4";
-				
+				return "result4"; // Virus/Bacteria - SSF filtration
+			
+			// *** Output Giardia/Virus - Chlorine model data ***
 			} else if ((selectionCriteria.getOrganismType() == OrganismType.GIARDIA &&
 				selectionCriteria.getDisinfectionType() == DisinfectionType.CHLORINE) ||
 				(selectionCriteria.getOrganismType() == OrganismType.VIRUS &&
 				selectionCriteria.getDisinfectionType() == DisinfectionType.CHLORINE)){
-				
 				
 				ChlorineDisinfectionModel cdModel = new ChlorineDisinfectionModel(
 					chlorineConstantService,
@@ -473,6 +416,7 @@ public class QMRAController extends HttpServlet {
 				doseList.add(new Double(2.0));
 				model.put("doseList", doseList);
 				
+				// *** Prepaare output for Giardia pathogen ***
 				if (selectionCriteria.getOrganismType() == OrganismType.GIARDIA &&
 					selectionCriteria.getDisinfectionType() == DisinfectionType.CHLORINE) {
 
@@ -482,8 +426,9 @@ public class QMRAController extends HttpServlet {
 					logList.add(1.0);
 					model.put("logList", logList);
 				
-					return "result5";
+					return "result5"; // Girardia - Chlorine disinfection
 					
+				// *** Perare output for Virus pathogen ***
 				} else if (selectionCriteria.getOrganismType() == OrganismType.VIRUS &&
 					selectionCriteria.getDisinfectionType() == DisinfectionType.CHLORINE) {
 
@@ -493,14 +438,15 @@ public class QMRAController extends HttpServlet {
 					logList.add(2.0);
 					model.put("logList", logList);
 
-					return "result6";
+					return "result6"; // Virus - Chlorine disinfection
 					
 				}
 			}
 		}
 		
 		model.put("selectionCriteria", selectionCriteria);
-		return "resultEmpty";
+		
+		return "resultEmpty"; // A pathogen/treatment combination has been selected which was not included (yet) 
 	}
 	
 }

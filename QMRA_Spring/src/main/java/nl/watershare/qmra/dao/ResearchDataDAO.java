@@ -25,7 +25,7 @@ public class ResearchDataDAO {
 	public ResearchData getResearchData(Integer researchId) {
 		
 		String queryStr =
-				" from ResearchData r " +
+				" from ResearchData " +
 				" where researchId = :researchId";
 		Query query = sessionFactory.getCurrentSession().createQuery(queryStr);
 		query.setInteger("researchId", researchId);
@@ -37,7 +37,7 @@ public class ResearchDataDAO {
 	public List<ResearchData> getResearchData(SelectionCriteria selectionCriteria) {;
 
 		// *** Compose query string ***
-		String queryStr = "from ResearchData r where " +
+		String queryStr = "from ResearchData where " +
 				" organismType = :organismType and" +
 				" processType = :processType";
 

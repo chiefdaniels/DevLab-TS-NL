@@ -2,6 +2,17 @@ package nl.watershare.qmra.form;
 
 import javax.validation.constraints.NotNull;
 
+import nl.watershare.qmra.form.types.ChlorinationType;
+import nl.watershare.qmra.form.types.DisinfectionType;
+import nl.watershare.qmra.form.types.FiltrationType;
+import nl.watershare.qmra.form.types.LocationType;
+import nl.watershare.qmra.form.types.OrganismType;
+import nl.watershare.qmra.form.types.OutputType;
+import nl.watershare.qmra.form.types.ProcessType;
+import nl.watershare.qmra.form.types.TargetType;
+import nl.watershare.qmra.form.types.UvType;
+import nl.watershare.qmra.form.types.YesNoType;
+
 import org.springframework.validation.BindingResult;
 
 /**

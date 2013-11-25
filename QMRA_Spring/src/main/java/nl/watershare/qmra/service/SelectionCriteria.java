@@ -1,11 +1,11 @@
 package nl.watershare.qmra.service;
 
-import nl.watershare.qmra.form.DisinfectionType;
-import nl.watershare.qmra.form.FiltrationType;
-import nl.watershare.qmra.form.OrganismType;
-import nl.watershare.qmra.form.ProcessType;
-import nl.watershare.qmra.form.TargetType;
-import nl.watershare.qmra.form.UvType;
+import nl.watershare.qmra.form.types.DisinfectionType;
+import nl.watershare.qmra.form.types.FiltrationType;
+import nl.watershare.qmra.form.types.OrganismType;
+import nl.watershare.qmra.form.types.ProcessType;
+import nl.watershare.qmra.form.types.TargetType;
+import nl.watershare.qmra.form.types.UvType;
 
 public class SelectionCriteria {
 	

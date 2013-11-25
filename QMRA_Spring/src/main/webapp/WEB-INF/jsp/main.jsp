@@ -1,16 +1,16 @@
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@page import="java.util.*"%>
 <%@page import="nl.watershare.qmra.form.MainForm"%>
-<%@page import="nl.watershare.qmra.form.OrganismType"%>
-<%@page import="nl.watershare.qmra.form.ProcessType"%>
-<%@page import="nl.watershare.qmra.form.FiltrationType"%>
-<%@page import="nl.watershare.qmra.form.DisinfectionType"%>
-<%@page import="nl.watershare.qmra.form.TargetType"%>
-<%@page import="nl.watershare.qmra.form.OutputType"%>
-<%@page import="nl.watershare.qmra.form.LocationType"%>
-<%@page import="nl.watershare.qmra.form.ChlorinationType"%>
-<%@page import="nl.watershare.qmra.form.UvType"%>
-<%@page import="nl.watershare.qmra.form.YesNoType"%>
+<%@page import="nl.watershare.qmra.form.types.OrganismType"%>
+<%@page import="nl.watershare.qmra.form.types.ProcessType"%>
+<%@page import="nl.watershare.qmra.form.types.FiltrationType"%>
+<%@page import="nl.watershare.qmra.form.types.DisinfectionType"%>
+<%@page import="nl.watershare.qmra.form.types.TargetType"%>
+<%@page import="nl.watershare.qmra.form.types.OutputType"%>
+<%@page import="nl.watershare.qmra.form.types.LocationType"%>
+<%@page import="nl.watershare.qmra.form.types.ChlorinationType"%>
+<%@page import="nl.watershare.qmra.form.types.UvType"%>
+<%@page import="nl.watershare.qmra.form.types.YesNoType"%>
 
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>

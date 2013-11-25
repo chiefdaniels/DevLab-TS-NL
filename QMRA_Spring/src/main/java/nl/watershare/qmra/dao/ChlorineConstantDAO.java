@@ -21,7 +21,7 @@ public class ChlorineConstantDAO {
 	public ChlorineConstant getChlorineConstant(Double temperature, Double chlorineConcentration) {
 		
 		String queryStr =
-				" from ChlorineConstant c " +
+				" from ChlorineConstant " +
 				" where temperature = :temperature and " +
 				" chlorineConcentration = :chlorineConcentration";
 		

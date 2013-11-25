@@ -8,75 +8,75 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import nl.watershare.qmra.form.DisinfectionType;
-import nl.watershare.qmra.form.FiltrationType;
-import nl.watershare.qmra.form.OrganismType;
-import nl.watershare.qmra.form.ProcessType;
-import nl.watershare.qmra.form.PublicationType;
-import nl.watershare.qmra.form.UvType;
+import nl.watershare.qmra.form.types.DisinfectionType;
+import nl.watershare.qmra.form.types.FiltrationType;
+import nl.watershare.qmra.form.types.OrganismType;
+import nl.watershare.qmra.form.types.ProcessType;
+import nl.watershare.qmra.form.types.PublicationType;
+import nl.watershare.qmra.form.types.UvType;
 
 /**
  * @author Marco Kortooms - Atos
  *
  */
 @Entity
-@Table(name="qmra_research_data")
+@Table(name="QMRA_RESEARCH_DATA")
 public class ResearchData implements Serializable {
 	private static final long serialVersionUID = -7827289980509006493L;
 	
 	@Id
 	@GeneratedValue
-	@Column(name="researchId")
+	@Column(name="RESEARCHID")
 	private Integer researchId;
 	
-	@Column(name="year")
+	@Column(name="YEAR")
 	private Integer year;
 	
-	@Column(name="organismType")
+	@Column(name="ORGANISMTYPE")
 	private String organismType;
-	@Column(name="organism")
+	@Column(name="ORGANISM")
 	private String organism;
-	@Column(name="organismTarget")
+	@Column(name="ORGANISMTARGET")
 	private Boolean organismTarget;
 	
-	@Column(name="processType")
+	@Column(name="PROCESSTYPE")
 	private String processType;
-	@Column(name="filtrationType")
+	@Column(name="FILTRATIONTYPE")
 	private String filtrationType;
-	@Column(name="disinfectionType")
+	@Column(name="DISINFECTIONTYPE")
 	private String disinfectionType;
 	
-	@Column(name="publicationType")
+	@Column(name="PUBLICATIONTYPE")
 	private String publicationType;
-	@Column(name="publicationDescription")
+	@Column(name="PUBLICATIONDESCRIPTION")
 	private String publicationDescription;
-	@Column(name="publicationAuthor")
+	@Column(name="PUBLICATIONAUTHOR")
 	private String publicationAuthor;
-	@Column(name="publicationYear")
+	@Column(name="PUBLICATIONYEAR")
 	private Integer publicationYear;
 	
-	@Column(name="avg")
+	@Column(name="AVG_REDUCTION")
 	private Double avg;
-	@Column(name="avg_stdDev")
+	@Column(name="AVG_STDDEV")
 	private Double avg_stdDev;
-	@Column(name="sampleCount")
+	@Column(name="SAMPLECOUNT")
 	private Integer sampleCount;
 
-	@Column(name="virus_studyCount")
+	@Column(name="VIRUS_STUDYCOUNT")
 	private Integer virus_studyCount;
-	@Column(name="virus_sampleCount")
+	@Column(name="VIRUS_SAMPLECOUNT")
 	private Integer virus_sampleCount;
-	@Column(name="virus_uvType")
+	@Column(name="VIRUS_UVTYPE")
 	private String virus_uvType;
-	@Column(name="virus_uvFluence")
+	@Column(name="VIRUS_UVFLUENCE")
 	private Double virus_uvFluence;
-	@Column(name="virus_inctMax")
+	@Column(name="VIRUS_INCTMAX")
 	private Double virus_inctMax;
-	@Column(name="virus_kValue")
+	@Column(name="VIRUS_KVALUE")
 	private Double virus_kValue;
-	@Column(name="virus_cl95")
+	@Column(name="VIRUS_CL95")
 	private Double virus_cl95;
-	@Column(name="virus_r2")
+	@Column(name="VIRUS_R2")
 	private Double virus_r2;
 	
 	public Integer getResearchId() {

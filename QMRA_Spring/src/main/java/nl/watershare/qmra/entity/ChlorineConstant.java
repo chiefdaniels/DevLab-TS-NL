@@ -12,20 +12,20 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="qmra_chlorine_constant")
+@Table(name="QMRA_CHLORINE_CONSTANT")
 public class ChlorineConstant implements Serializable {
 	private static final long serialVersionUID = -7827289980509006493L;
 	
 	@Id
-	@Column(name="temperature")
+	@Column(name="TEMPERATURE")
 	private Double temperature;
 	@Id
-	@Column(name="chlorineConcentration")
+	@Column(name="CHLORINECONCENTRATION")
 	private Double chlorineConcentration;
 
-	@Column(name="a")
+	@Column(name="A")
 	private Double a;
-	@Column(name="b")
+	@Column(name="B")
 	private Double b;
 	
 	public Double getTemperature() {

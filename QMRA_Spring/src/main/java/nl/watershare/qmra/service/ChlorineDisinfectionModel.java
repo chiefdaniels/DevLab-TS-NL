@@ -1,8 +1,8 @@
 package nl.watershare.qmra.service;
 
 import nl.watershare.qmra.entity.ChlorineConstant;
-import nl.watershare.qmra.form.ChlorinationType;
-import nl.watershare.qmra.form.OrganismType;
+import nl.watershare.qmra.form.types.ChlorinationType;
+import nl.watershare.qmra.form.types.OrganismType;
 
 public class ChlorineDisinfectionModel {
 	

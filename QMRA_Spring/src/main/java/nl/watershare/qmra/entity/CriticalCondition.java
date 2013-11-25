@@ -8,42 +8,42 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import nl.watershare.qmra.form.CriticalConditionType;
+import nl.watershare.qmra.form.types.CriticalConditionType;
 
 /**
  * @author Marco Kortooms - Atos
  *
  */
 @Entity
-@Table(name="qmra_critical_condition")
+@Table(name="QMRA_CRITICAL_CONDITION")
 public class CriticalCondition implements Serializable {
 	private static final long serialVersionUID = -7827289980509006493L;
 	
 	@Id
 	@GeneratedValue
-	@Column(name="conditionId")
+	@Column(name="CONDITIONID")
 	private Integer conditionId;
 
-	@Column(name="conditionType")
+	@Column(name="CONDITIONTYPE")
 	private String conditionType;
-	@Column(name="organismType")
+	@Column(name="ORGANISMTYPE")
 	private String organismType;
-	@Column(name="organism")
+	@Column(name="ORGANISM")
 	private String organism;
-	@Column(name="organismTarget")
+	@Column(name="ORGANISMTARGET")
 	private Boolean organismTarget;
-	@Column(name="processType")
+	@Column(name="PROCESSTYPE")
 	private String processType;
-	@Column(name="filtrationType")
+	@Column(name="FILTRATIONTYPE")
 	private String filtrationType;
-	@Column(name="disinfectionType")
+	@Column(name="DISINFECTIONTYPE")
 	private String disinfectionType;
 	
-	@Column(name="subject")
+	@Column(name="SUBJECT")
 	private String subject;
-	@Column(name="effect")
+	@Column(name="EFFECT")
 	private String effect;
-	@Column(name="references")
+	@Column(name="REFERENCEINFO")
 	private String references;
 	
 	public Integer getConditionId() {
