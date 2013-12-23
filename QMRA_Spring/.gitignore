@@ -1,1 +1,6 @@
 /target
+/src/main/webapp/WEB-INF/data/QMRA.tmp
+/src/main/webapp/WEB-INF/data/QMRA.lck
+/src/main/webapp/WEB-INF/data/QMRA.log
+/src/main/webapp/WEB-INF/data.tmp
+/src/main/webapp/WEB-INF/lib
