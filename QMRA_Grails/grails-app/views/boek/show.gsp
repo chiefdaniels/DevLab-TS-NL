@@ -32,20 +32,20 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${boekInstance?.auteur}">
-				<li class="fieldcontain">
-					<span id="auteur-label" class="property-label"><g:message code="boek.auteur.label" default="Auteur" /></span>
-					
-						<span class="property-value" aria-labelledby="auteur-label"><g:link controller="auteur" action="show" id="${boekInstance?.auteur?.id}">${boekInstance?.auteur?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${boekInstance?.titel}">
 				<li class="fieldcontain">
 					<span id="titel-label" class="property-label"><g:message code="boek.titel.label" default="Titel" /></span>
 					
 						<span class="property-value" aria-labelledby="titel-label"><g:fieldValue bean="${boekInstance}" field="titel"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${boekInstance?.auteur}">
+				<li class="fieldcontain">
+					<span id="auteur-label" class="property-label"><g:message code="boek.auteur.label" default="Auteur" /></span>
+					
+						<span class="property-value" aria-labelledby="auteur-label"><g:link controller="auteur" action="show" id="${boekInstance?.auteur?.id}">${boekInstance?.auteur?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

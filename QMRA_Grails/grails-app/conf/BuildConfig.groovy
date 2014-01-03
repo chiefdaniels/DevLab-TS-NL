@@ -61,3 +61,5 @@ grails.project.dependency.resolution = {
         compile ':cache:1.0.1'
     }
 }
+
+grails.server.port.http = 8090

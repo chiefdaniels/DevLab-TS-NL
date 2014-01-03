@@ -26,9 +26,9 @@
 					
 						<g:sortableColumn property="ISBN" title="${message(code: 'boek.ISBN.label', default: 'ISBN')}" />
 					
-						<th><g:message code="boek.auteur.label" default="Auteur" /></th>
-					
 						<g:sortableColumn property="titel" title="${message(code: 'boek.titel.label', default: 'Titel')}" />
+					
+						<th><g:message code="boek.auteur.label" default="Auteur" /></th>
 					
 					</tr>
 				</thead>
@@ -38,9 +38,9 @@
 					
 						<td><g:link action="show" id="${boekInstance.id}">${fieldValue(bean: boekInstance, field: "ISBN")}</g:link></td>
 					
-						<td>${fieldValue(bean: boekInstance, field: "auteur")}</td>
-					
 						<td>${fieldValue(bean: boekInstance, field: "titel")}</td>
+					
+						<td>${fieldValue(bean: boekInstance, field: "auteur")}</td>
 					
 					</tr>
 				</g:each>

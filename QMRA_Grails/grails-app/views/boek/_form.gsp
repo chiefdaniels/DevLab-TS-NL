@@ -2,12 +2,20 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: boekInstance, field: 'ISBN', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: boekInstance, field: 'ISBN', 'error')} required">
 	<label for="ISBN">
 		<g:message code="boek.ISBN.label" default="ISBN" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="ISBN" value="${boekInstance?.ISBN}"/>
+	<g:textField name="ISBN" required="" value="${boekInstance?.ISBN}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: boekInstance, field: 'titel', 'error')} required">
+	<label for="titel">
+		<g:message code="boek.titel.label" default="Titel" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="titel" required="" value="${boekInstance?.titel}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: boekInstance, field: 'auteur', 'error')} required">
@@ -16,13 +24,5 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="auteur" name="auteur.id" from="${dev.lab.Auteur.list()}" optionKey="id" required="" value="${boekInstance?.auteur?.id}" class="many-to-one"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: boekInstance, field: 'titel', 'error')} ">
-	<label for="titel">
-		<g:message code="boek.titel.label" default="Titel" />
-		
-	</label>
-	<g:textField name="titel" value="${boekInstance?.titel}"/>
 </div>
 
