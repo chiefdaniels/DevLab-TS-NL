@@ -4,7 +4,7 @@ class QuestionaireController {
 
 	static allowedMethods = [result: ["POST","GET"]]
 	
-	//def index() {}
+	def index() {}
 	
     def result() { 
 		println params
