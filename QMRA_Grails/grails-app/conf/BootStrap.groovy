@@ -1,5 +1,5 @@
-import dev.lab.Auteur
-import dev.lab.Boek
+import dev.lab.tutorial.Auteur
+import dev.lab.tutorial.Boek
 
 class BootStrap {
 
