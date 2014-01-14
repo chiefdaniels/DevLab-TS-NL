@@ -1,4 +1,4 @@
-package dev.lab
+package dev.lab.tutorial
 
 class Auteur {
 
