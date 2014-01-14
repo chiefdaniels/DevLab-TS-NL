@@ -1,4 +1,6 @@
-package dev.lab
+package dev.lab.tutorial
+
+import dev.lab.tutorial.Boek
 
 class BooksService {
 
