@@ -11,7 +11,7 @@
 	<body>
         <h1>Start</h1>
         <ul>
-            <li><g:link controller="demo">Grails Demo stuff</g:link></li>
+            <li><g:link controller="demo">Grails Demo stuff (Tutorial package)</g:link></li>
             <li><g:link controller="questionaire">QMRA (Regular request-response)</g:link></li>
             <li>...</li>
         </ul>
