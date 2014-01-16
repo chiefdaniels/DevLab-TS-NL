@@ -4,7 +4,7 @@ import grails.converters.JSON
 
 class CataloogController {
 
-    BooksService booksService
+	BooksService booksService
 
     def index() {
     }
