@@ -5,8 +5,9 @@ import grails.converters.JSON
 class Cataloog3Controller {
 
     BooksService booksService
+	
     def index() {
-     println 'hello'
+		println 'hello'
     }
 
     def test(){
