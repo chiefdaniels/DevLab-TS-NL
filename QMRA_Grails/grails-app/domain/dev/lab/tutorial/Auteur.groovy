@@ -2,7 +2,6 @@ package dev.lab.tutorial
 
 class Auteur {
 
-
 	String achternaam
 	String voornaam
 	
