@@ -5,6 +5,7 @@ class BootStrap {
 
     def init = { servletContext ->
 	
+		//Tutorial stuff
 		new Auteur(voornaam:"Stefan",achternaam:"Livens").save()
 		
         def a= new Auteur(voornaam:"Marco",achternaam:"Kortooms")
@@ -16,6 +17,9 @@ class BootStrap {
 		new Boek(titel:'Grails in Action',ISBN:'123',auteur:a).save()
         new Boek(titel:'Grails in Action v2',ISBN:'124',auteur:a).save()
         new Boek(titel:'Grails in Enterprise',ISBN:'129',auteur:b).save()
+		
+		//QMRA stuff
+		//new Chlorine_Constant().save()
 	
     }
     def destroy = {
