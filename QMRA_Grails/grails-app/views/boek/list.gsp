@@ -1,9 +1,9 @@
 
-<%@ page import="dev.lab.Boek" %>
+<%@ page import="dev.lab.tutorial.Boek" %>
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
+        <meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'boek.label', default: 'Boek')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>

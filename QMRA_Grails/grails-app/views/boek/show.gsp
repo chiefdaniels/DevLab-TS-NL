@@ -1,5 +1,5 @@
 
-<%@ page import="dev.lab.Boek" %>
+<%@ page import="dev.lab.tutorial.Boek" %>
 <!DOCTYPE html>
 <html>
 	<head>

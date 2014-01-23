@@ -1,4 +1,4 @@
-<%@ page import="dev.lab.Boek" %>
+<%@ page import="dev.lab.tutorial.Boek" %>
 
 
 
