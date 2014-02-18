@@ -23,6 +23,6 @@
 		<g:message code="boek.auteur.label" default="Auteur" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="auteur" name="auteur.id" from="${dev.lab.Auteur.list()}" optionKey="id" required="" value="${boekInstance?.auteur?.id}" class="many-to-one"/>
+	<g:select id="auteur" name="auteur.id" from="${dev.lab.tutorial.Auteur.list()}" optionKey="id" required="" value="${boekInstance?.auteur?.id}" class="many-to-one"/>
 </div>
 
