@@ -42,6 +42,12 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
+
+        // required dependency for coverage, see https://jira.grails.org/browse/GPCODECOVERAGE-50
+        test 'net.sourceforge.cobertura:cobertura:1.9.4.1'
+
+        // Spock jars
+        compile "org.spockframework:spock-grails-support:0.7-groovy-2.0"
     }
 
     plugins {
@@ -53,6 +59,14 @@ grails.project.dependency.resolution = {
         //runtime ":zipped-resources:1.0"
         //runtime ":cached-resources:1.0"
         //runtime ":yui-minify-resources:0.1.5"
+
+        // code coverage
+        test ":code-coverage:1.2.5"
+
+        // Spock plugin for Spock unit tests
+        test(":spock:0.7") {
+            exclude "spock-grails-support"
+        }
 
         build ":tomcat:$grailsVersion"
 
