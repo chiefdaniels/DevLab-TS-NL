@@ -16,6 +16,7 @@ class Critical_Condition {
 	
 	String testveldMK1
 	String testveldTJ1
+	String testveldTJ2
 	
     static constraints = {
 		conditionId(nullable:false,blank:false)
@@ -33,6 +34,7 @@ class Critical_Condition {
 		
 		testveldMK1()
 		testveldTJ1()
+		testveldTJ2()
     }
 	public String condition() {
 		return "$conditionType [organism: ${organism}, organisnTarget: $organisnTarget]"
