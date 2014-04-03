@@ -16,7 +16,7 @@ class Critical_Condition {
 	
 	String testveldMK1
 	String testveldMK2
-	String testveldMK3
+	String testveldMK4
 	String testveldTJ1
 	String testveldTJ2
 	String testveldTJ3
@@ -38,7 +38,7 @@ class Critical_Condition {
 		
 		testveldMK1()
 		testveldMK2()
-		testveldMK3()
+		testveldMK4()
 		testveldTJ1()
 		testveldTJ2()
 		testveldTJ3()
