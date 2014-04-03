@@ -12,6 +12,9 @@ class Critical_Condition {
 	String subject
 	String effect
 	String referenceInfo
+	String list
+	
+	String testveldMK1
 	
     static constraints = {
 		conditionId(nullable:false,blank:false)
@@ -25,6 +28,9 @@ class Critical_Condition {
 		subject()
 		effect()
 		referenceInfo()
+		list()
+		
+		testveldMK1()
     }
 	public String condition() {
 		return "$conditionType [organism: ${organism}, organisnTarget: $organisnTarget]"
