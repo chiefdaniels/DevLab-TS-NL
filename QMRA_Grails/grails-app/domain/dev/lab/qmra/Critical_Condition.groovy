@@ -21,7 +21,6 @@ class Critical_Condition {
 	String testveldTJ2
 	String testveldTJ5
 	
-	
     static constraints = {
 		conditionId(nullable:false,blank:false)
 		conditionType()
