@@ -15,6 +15,7 @@ class Critical_Condition {
 	String list
 	
 	String testveldMK1
+	String testveldMK2
 	String testveldTJ1
 	
     static constraints = {
@@ -32,6 +33,7 @@ class Critical_Condition {
 		list()
 		
 		testveldMK1()
+		testveldMK2()
 		testveldTJ1()
     }
 	public String condition() {
