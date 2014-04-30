@@ -41,7 +41,7 @@ class BootStrap {
 		new ResearchData(
 			researchId:60,
 			year:1991,
-			organismType:'CRYPTOSPORIDIUM',
+			organismType:'Cryptosporidium',
 			organismTarget:0,
 			processType:'CONVENTIONAL',
 			publicationType:'REPORT',
