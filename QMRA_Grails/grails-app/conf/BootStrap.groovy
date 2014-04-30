@@ -34,8 +34,8 @@ class BootStrap {
 		
 		//QMRA stuff
 		//new Chlorine_Constant().save()
-		new Chlorine_Constant(chlorineConcentration:"5.0",temperature:"18,5").save()
-		new Chlorine_Constant(chlorineConcentration:"25.0",temperature:"28,5").save()
+		new Chlorine_Constant(chlorineConcentration:5,temperature:18.5).save()
+		new Chlorine_Constant(chlorineConcentration:25,temperature:28.5).save()
 		
 		// ResearchDAta
 		new ResearchData(
