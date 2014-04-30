@@ -50,10 +50,14 @@ class BootStrap {
 			publicationYear:1991,
 			avg_reduction:1.425E0,
 			avg_stddev:0.406201920231798E0,
-			sampleCount:8
+			sampleCount:8,
+			filtrationType:'',
+			disinfectionType:'',
+			orgainsm:''
 		).save()
 
-		new ResearchData(researchId:61,year:1993,organismType:'CRYPTOSPORIDIUM',orgainsm:'',organismTarget:0,processType:'CONVENTIONAL',publicationType:'PUBLICATION',	publicationDescription:'Harrington, G.W. (2003). Journ. AWWA, 95(12):95-104. ',													publicationAuthor:'Harrington 2003',	publicationYear:1993,avg_reduction:1.42555994729908E0,	avg_stddev:0.1986062898539E0,	sampleCount:14).save()
+		new ResearchData(researchId:61,year:1993,organismType:'Bacteria',orgainsm:'',organismTarget:0,processType:'CONVENTIONAL',publicationType:'PUBLICATION',	publicationDescription:'Harrington, G.W. (2003). Journ. AWWA, 95(12):95-104. ',													publicationAuthor:'Harrington 2003',	publicationYear:1993,avg_reduction:1.42555994729908E0,	avg_stddev:0.1986062898539E0,	sampleCount:14).save()
+		
 		new ResearchData(researchId:62,year:1994,organismType:'CRYPTOSPORIDIUM',orgainsm:'',organismTarget:0,processType:'CONVENTIONAL',publicationType:'REPORT',		publicationDescription:'Patania, N.L. (1995). Denver, Colo.: Awwa Research Foundation and American Water Works Association.',	publicationAuthor:'Patania 1995',		publicationYear:1994,avg_reduction:1.49545454545455E0,	avg_stddev:0.325835589168574E0,	sampleCount:22).save()
 		new ResearchData(researchId:63,year:1994,organismType:'CRYPTOSPORIDIUM',orgainsm:'',organismTarget:0,processType:'CONVENTIONAL',publicationType:'REPORT',		publicationDescription:'Patania, N.L. (1995). Denver, Colo.: Awwa Research Foundation and American Water Works Association.',	publicationAuthor:'Patania 1995',		publicationYear:1994,avg_reduction:1.51428571428571E0,	avg_stddev:0.313201593379148E0,	sampleCount:7).save()
 		new ResearchData(researchId:64,year:1994,organismType:'CRYPTOSPORIDIUM',orgainsm:'',organismTarget:1,processType:'CONVENTIONAL',publicationType:'PUBLICATION',	publicationDescription:'Harrington, G.W. (2003). Journ. AWWA, 95(12):95-104. ',													publicationAuthor:'Harrington 2003',	publicationYear:1994,avg_reduction:1.67360517329461E0,	avg_stddev:0.407036848630971E0,	sampleCount:14).save()
@@ -89,6 +93,7 @@ class BootStrap {
 		new ResearchData(researchId:94,year:2003,organismType:'CRYPTOSPORIDIUM',orgainsm:'',organismTarget:1,processType:'CONVENTIONAL',publicationType:'REPORT',		publicationDescription:'Patania, N.L. (1995). Denver, Colo.: Awwa Research Foundation and American Water Works Association.',	publicationAuthor:'Patania 1995',		publicationYear:2003,avg_reduction:5.01363636363636E0,	avg_stddev:0.61666959166266E0,	sampleCount:22).save()
 		new ResearchData(researchId:95,year:2003,organismType:'CRYPTOSPORIDIUM',orgainsm:'',organismTarget:1,processType:'CONVENTIONAL',publicationType:'PUBLICATION',	publicationDescription:'Cornwell, D.A. (2001). Jour. AWWA April, 2001: 153-162.',												publicationAuthor:'Cornwell 2001',		publicationYear:2003,avg_reduction:5.35E0,				avg_stddev:0.494974746830583E0,	sampleCount:2).save()
 		new ResearchData(researchId:96,year:2003,organismType:'CRYPTOSPORIDIUM',orgainsm:'',organismTarget:1,processType:'CONVENTIONAL',publicationType:'REPORT',		publicationDescription:'Patania, N.L. (1995). Denver, Colo.: Awwa Research Foundation and American Water Works Association.',	publicationAuthor:'Patania 1995',		publicationYear:2003,avg_reduction:5.45E0,				avg_stddev:0.494974746830583E0,	sampleCount:11).save()	
+    
     }
 	
     def destroy = {
