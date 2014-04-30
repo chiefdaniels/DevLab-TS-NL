@@ -1,1 +1,1 @@
-You posted: ${answer}
+You posted: ${answer},${res}
