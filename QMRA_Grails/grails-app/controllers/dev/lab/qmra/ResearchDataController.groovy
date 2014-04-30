@@ -2,7 +2,7 @@ package dev.lab.qmra
 
 
 
-class Critical_ConditionController {
+class ResearchDataController {
 
     static scaffold = true
 }
