@@ -35,12 +35,13 @@ class Critical_Condition {
 		referenceInfo()
 		list()
 		
-		testveldMK1()
-		testveldMK2()
-		testveldMK4()
-		testveldTJ1()
-		testveldTJ2()
-		testveldTJ6()
+		testveldMK1(nullable:true,blank:true)
+		testveldMK2(nullable:true,blank:true)
+		testveldMK4(nullable:true,blank:true)
+		testveldTJ1(nullable:true,blank:true)
+		testveldTJ2(nullable:true,blank:true)
+		testveldTJ6(nullable:true,blank:true)
+		
     }
 	public String condition() {
 		return "$conditionType [organism: ${organism}, organisnTarget: $organisnTarget]"
