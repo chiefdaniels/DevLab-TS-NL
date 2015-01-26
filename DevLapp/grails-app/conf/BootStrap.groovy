@@ -3,7 +3,8 @@ import net.atos.klant.Klant
 
 class BootStrap {
 
-    def init = { servletContext ->
+    def init = { 
+		/*servletContext ->
 		new Klant(
 			klantnummer:1,
 			voornaam:"Mark",
@@ -63,7 +64,7 @@ class BootStrap {
 			artikelOmschrijving: "Machine voor teleportering naar Mars",
 			categorieCode: "PR"
 			).save()
-			
+		*/	
 	}
 	
     def destroy = {
