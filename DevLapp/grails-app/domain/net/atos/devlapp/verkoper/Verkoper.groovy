@@ -20,4 +20,9 @@ class Verkoper {
 		emailadres blank: false, email: true
 
 	}
+	
+	public String toString()
+	{
+		return verkoperID +  ": " + voornaam + " " + achternaam
+	}
 }
