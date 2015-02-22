@@ -1,4 +1,4 @@
-package net.atos.devLapp.artikel
+package net.atos.devlapp.artikel
 
 
 

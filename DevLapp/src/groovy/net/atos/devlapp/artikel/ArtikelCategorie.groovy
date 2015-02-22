@@ -1,6 +1,5 @@
-package net.atos.devLapp.artikel;
+package net.atos.devlapp.artikel;
 
-import net.atos.devLapp.artikel.ArtikelCategorie;
 
 enum ArtikelCategorie {
 

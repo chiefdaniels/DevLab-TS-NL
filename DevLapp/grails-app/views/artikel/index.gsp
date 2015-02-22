@@ -1,5 +1,5 @@
 
-<%@ page import="net.atos.devLapp.artikel.Artikel" %>
+<%@ page import="net.atos.devlapp.artikel.Artikel" %>
 <!DOCTYPE html>
 <html>
 	<head>

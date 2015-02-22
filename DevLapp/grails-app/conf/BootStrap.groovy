@@ -1,4 +1,4 @@
-import net.atos.devLapp.artikel.Artikel
+import net.atos.devlapp.artikel.Artikel
 import net.atos.klant.Klant
 
 class BootStrap {
