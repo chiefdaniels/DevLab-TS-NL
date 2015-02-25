@@ -1,6 +1,6 @@
-package net.atos.devLapp.artikel
+package net.atos.devlapp.artikel
 
-import net.atos.devLapp.artikel.ArtikelCategorie;
+import net.atos.devlapp.artikel.ArtikelCategorie;
 
 class Artikel {
 	
@@ -24,7 +24,7 @@ class Artikel {
 		
 		artikelCategorie blank:false, size:5..200
 		
-		categorieCode inList: ArtikelCategorie.values()*.categorieCode
+		categorieCode inList: net.atos.devlapp.artikel.ArtikelCategorie.values()*.categorieCode
     }
 	
 	static mapping = {

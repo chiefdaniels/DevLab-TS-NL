@@ -1,4 +1,4 @@
-<%@ page import="net.atos.klant.Klant" %>
+<%@ page import="net.atos.devlapp.klant.Klant" %>
 <!DOCTYPE html>
 <html>
 	<head>

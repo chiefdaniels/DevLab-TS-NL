@@ -1,11 +1,8 @@
-package net.atos.devLapp.artikel
+package net.atos.devlapp.artikel
 
 
 
 import grails.test.mixin.*
-import net.atos.devLapp.artikel.Artikel;
-
-import org.junit.*
 
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions

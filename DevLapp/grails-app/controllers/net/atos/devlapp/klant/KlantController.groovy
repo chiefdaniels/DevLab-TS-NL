@@ -1,4 +1,4 @@
-package net.atos.klant
+package net.atos.devlapp.klant
 
 
 

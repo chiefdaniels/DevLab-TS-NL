@@ -25,7 +25,7 @@
 		<g:message code="bestelling.klant.label" default="Klant" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="klant" name="klant.id" from="${net.atos.klant.Klant.list()}" optionKey="id" required="" value="${bestellingInstance?.klant?.id}" class="many-to-one"/>
+	<g:select id="klant" name="klant.id" from="${net.atos.devlapp.klant.Klant.list()}" optionKey="id" required="" value="${bestellingInstance?.klant?.id}" class="many-to-one"/>
 
 </div>
 

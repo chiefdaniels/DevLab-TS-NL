@@ -1,7 +1,7 @@
 package net.atos.devlapp.bestelling
 
 import net.atos.devlapp.verkoper.Verkoper
-import net.atos.klant.Klant
+import net.atos.devlapp.klant.Klant
 
 class Bestelling {
 

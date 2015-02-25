@@ -1,13 +1,13 @@
-package net.atos.klant
+package net.atos.devlapp.artikel
 
 
 
 import grails.test.mixin.*
 import spock.lang.*
 
-@TestFor(KlantController)
-@Mock(Klant)
-class KlantControllerSpec extends Specification {
+@TestFor(ArtikelController)
+@Mock(Artikel)
+class ArtikelControllerSpec extends Specification {
 
     def populateValidParams(params) {
         assert params != null
@@ -21,8 +21,8 @@ class KlantControllerSpec extends Specification {
             controller.index()
 
         then:"The model is correct"
-            !model.klantInstanceList
-            model.klantInstanceCount == 0
+            !model.artikelInstanceList
+            model.artikelInstanceCount == 0
     }
 
     void "Test the create action returns the correct model"() {
@@ -30,32 +30,32 @@ class KlantControllerSpec extends Specification {
             controller.create()
 
         then:"The model is correctly created"
-            model.klantInstance!= null
+            model.artikelInstance!= null
     }
 
     void "Test the save action correctly persists an instance"() {
 
         when:"The save action is executed with an invalid instance"
             request.contentType = FORM_CONTENT_TYPE
-            def klant = new Klant()
-            klant.validate()
-            controller.save(klant)
+            def artikel = new Artikel()
+            artikel.validate()
+            controller.save(artikel)
 
         then:"The create view is rendered again with the correct model"
-            model.klantInstance!= null
+            model.artikelInstance!= null
             view == 'create'
 
         when:"The save action is executed with a valid instance"
             response.reset()
             populateValidParams(params)
-            klant = new Klant(params)
+            artikel = new Artikel(params)
 
-            controller.save(klant)
+            controller.save(artikel)
 
         then:"A redirect is issued to the show action"
-            response.redirectedUrl == '/klant/show/1'
+            response.redirectedUrl == '/artikel/show/1'
             controller.flash.message != null
-            Klant.count() == 1
+            Artikel.count() == 1
     }
 
     void "Test that the show action returns the correct model"() {
@@ -67,11 +67,11 @@ class KlantControllerSpec extends Specification {
 
         when:"A domain instance is passed to the show action"
             populateValidParams(params)
-            def klant = new Klant(params)
-            controller.show(klant)
+            def artikel = new Artikel(params)
+            controller.show(artikel)
 
         then:"A model is populated containing the domain instance"
-            model.klantInstance == klant
+            model.artikelInstance == artikel
     }
 
     void "Test that the edit action returns the correct model"() {
@@ -83,11 +83,11 @@ class KlantControllerSpec extends Specification {
 
         when:"A domain instance is passed to the edit action"
             populateValidParams(params)
-            def klant = new Klant(params)
-            controller.edit(klant)
+            def artikel = new Artikel(params)
+            controller.edit(artikel)
 
         then:"A model is populated containing the domain instance"
-            model.klantInstance == klant
+            model.artikelInstance == artikel
     }
 
     void "Test the update action performs an update on a valid domain instance"() {
@@ -96,28 +96,28 @@ class KlantControllerSpec extends Specification {
             controller.update(null)
 
         then:"A 404 error is returned"
-            response.redirectedUrl == '/klant/index'
+            response.redirectedUrl == '/artikel/index'
             flash.message != null
 
 
         when:"An invalid domain instance is passed to the update action"
             response.reset()
-            def klant = new Klant()
-            klant.validate()
-            controller.update(klant)
+            def artikel = new Artikel()
+            artikel.validate()
+            controller.update(artikel)
 
         then:"The edit view is rendered again with the invalid instance"
             view == 'edit'
-            model.klantInstance == klant
+            model.artikelInstance == artikel
 
         when:"A valid domain instance is passed to the update action"
             response.reset()
             populateValidParams(params)
-            klant = new Klant(params).save(flush: true)
-            controller.update(klant)
+            artikel = new Artikel(params).save(flush: true)
+            controller.update(artikel)
 
         then:"A redirect is issues to the show action"
-            response.redirectedUrl == "/klant/show/$klant.id"
+            response.redirectedUrl == "/artikel/show/$artikel.id"
             flash.message != null
     }
 
@@ -127,23 +127,23 @@ class KlantControllerSpec extends Specification {
             controller.delete(null)
 
         then:"A 404 is returned"
-            response.redirectedUrl == '/klant/index'
+            response.redirectedUrl == '/artikel/index'
             flash.message != null
 
         when:"A domain instance is created"
             response.reset()
             populateValidParams(params)
-            def klant = new Klant(params).save(flush: true)
+            def artikel = new Artikel(params).save(flush: true)
 
         then:"It exists"
-            Klant.count() == 1
+            Artikel.count() == 1
 
         when:"The domain instance is passed to the delete action"
-            controller.delete(klant)
+            controller.delete(artikel)
 
         then:"The instance is deleted"
-            Klant.count() == 0
-            response.redirectedUrl == '/klant/index'
+            Artikel.count() == 0
+            response.redirectedUrl == '/artikel/index'
             flash.message != null
     }
 }
